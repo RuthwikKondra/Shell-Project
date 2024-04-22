@@ -45,7 +45,7 @@ VALIDATE $? "Starting MySQL Server"
 
 #Below code will be useful for idempotent nature
 mysql -h mysql-server -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
-if [ $? -ne 0 ]
+if [ $? -eq 0 ]
 then
     mysql_secure_installation --set-root-pass ${mysql_root_password} &>>$LOGFILE
     VALIDATE $? "MySQL Root password Setup"

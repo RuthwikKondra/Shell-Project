@@ -44,7 +44,7 @@ VALIDATE $? "Starting MySQL Server"
 # VALIDATE $? "Setting up root password"
 
 #Below code will be useful for idempotent nature
-mysql -h  34.227.109.79 -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
+mysql -h  172.31.87.172 -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
 if [ $? -eq 0 ]
 then
     mysql_secure_installation --set-root-pass ${mysql_root_password} &>>$LOGFILE

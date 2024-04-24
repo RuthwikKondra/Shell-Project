@@ -63,7 +63,7 @@ npm install &>>LOGFILE
 VALIDATE $? "Installing nodejs dependences"
 
 #check your repo and path
-cp /home/ec2-user/Shell-Backend/backend.service /etc/systemd/system/backend.service &>>$LOGFILE
+cp /home/ec2-user/Shell-Project/backend.service /etc/systemd/system/backend.service &>>$LOGFILE
 VALIDATE $? "Copied backend service"
 
 

@@ -79,7 +79,7 @@ VALIDATE $? "Enabiling backend"
 dnf install mysql -y &>LOGFILE
 VALIDATE $? "installing mysql"
 
-mysql -h db.devops-practice.cloud -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
+mysql -h 172.31.89.58 -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
 VALIDATE $? "Schema loading"
 
 systemctl restart backend &>LOGFILE
